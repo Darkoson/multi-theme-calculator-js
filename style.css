@@ -1,3 +1,80 @@
+:root{
+    --white: white ;
+    --red: #fa2b2b ;
+
+    --blue-deem: #2f698f ;
+    --blue-light: #4eabe9 ;
+    --blue-deep: #022842 ;
+
+    --orange: orange ;
+    --orange-light: rgb(238, 255, 0) ;
+
+    --green-deem: rgb(85, 160, 147) ;
+    --green-light: rgb(0, 255, 213) ;
+    
+    --gray: #e4cdcd ;
+    --gray-light: #f7f4f4 ;
+
+    --violet-deem: #2e0252 ; 
+    --violet-light: #8600f3 ; 
+    --violet-deep: #20013a ; 
+}
+
+.theme-one {
+    --bg-calc: var(--blue-deem);
+    --bg-screen: var(--blue-deep);
+    --bg-keyboard: var(--blue-deep);
+    --bg-numbers: var(--white);
+    --bg-resetdel: var(--blue-deem);
+    --bg-equal: var(--red);
+
+    --font-calc: var(--white);
+    --font-numbers: var(--blue-deem);
+    --font-equal: var(--white);
+    --font-resetdel: var(--white);
+}
+
+.theme-two {
+    --bg-calc: var(--gray-light);
+    --bg-screen: var(--white);
+    --bg-keyboard: var(--gray);
+    --bg-numbers: var(--gray-light);
+    --bg-resetdel: var(--green-deem);
+    --bg-equal: var(--orange);
+
+    --font-calc: var(--blue-deep);
+    --font-numbers: var(--blue-deep);
+    --font-equal: var(--white);
+    --font-resetdel: var(--white);
+}
+
+.theme-three {
+    --bg-calc: var(--violet-deep);
+    --bg-screen: var(--violet-deem);
+    --bg-keyboard: var(--violet-deem);
+    --bg-numbers: var(--violet-deep);
+    --bg-resetdel: var(--violet-light);
+    --bg-equal: var(--green-light);
+
+    --font-calc: var(--orange-light);
+    --font-numbers: var(--orange-light);
+    --font-equal: var(--blue-deep);
+    --font-resetdel: var(--white);
+}
+
+.bg-calc{background-color: var(--bg-calc);}
+.bg-screen{background-color: var(--bg-screen);}
+.bg-keyboard{background-color: var(--bg-keyboard);}
+.bg-numbers{background-color: var(--bg-numbers);}
+.bg-resetdel{background-color: var(--bg-resetdel);}
+.bg-equal{background-color: var(--bg-equal);}
+
+.font-calc{ color: var(--font-calc);}
+.font-resetdel{ color: var(--font-resetdel);}
+.font-numbers{ color: var(--font-numbers);}
+.font-equal{ color: var(--font-equal);}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -5,8 +82,10 @@
 }
 
 body{
-    background-color: blueviolet;
     display: flex;
+}
+.calculator{
+    margin: auto;
 }
 .wrapper{
     margin: auto;
@@ -14,7 +93,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: red;
 }
 .header, .screen, .keyboard{
     border-radius: 8px;
@@ -26,7 +104,6 @@ body{
     justify-content: space-between;
     align-items: flex-end;
     padding: 5px;
-    background-color: wheat;
 
 }
 .header .title{
@@ -62,13 +139,13 @@ body{
     height: 25px;
     width: 100px;
     border-radius: 15px;
-    background-color: green;
+    background-color: var(--bg-keyboard);
 }
 .one, .two, .three{
     height: 18px;
     width: 18px;
     border-radius: 50%;
-    background-color: orange;
+    background-color: var(--bg-equal);
 }
 
 
@@ -77,15 +154,11 @@ body{
     padding: 10px 50px;
     text-align: right;
     font-size: 50px;
-    background-color: yellow;
 }
 
 .keyboard{
     flex-grow: 1;
     padding: 40px 50px;
-    
-    
-    background-color: wheat;
 }
 
 .keyboard {
@@ -103,7 +176,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: violet;
     cursor: pointer;
     aspect-ratio: 1/.8;
     border-radius: 10px;
@@ -123,3 +195,11 @@ body{
 }
 
 .d-none{visibility: hidden;}
+
+
+
+
+
+
+
+ 
